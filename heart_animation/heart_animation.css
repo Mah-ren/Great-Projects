@@ -1,0 +1,67 @@
+:root {
+    --main-color: #f00;
+    --bg1-color: #123;
+    --white-color: #f00;
+    --yellow-color: #f00;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg1-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    height: 30px;
+    width: 30px;
+    background-color: var(--main-color);
+    rotate: -45deg;
+    position: relative;
+    animation: heart .5s ease infinite;
+    box-shadow: 
+    -10px 10px 90px var(--main-color)
+    ;
+    
+}
+.heart::before {
+    content: '';
+    top: -50%;
+
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: var(--white-color);
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px var(--main-color);
+    /* animation: heart .8s ease infinite; */
+
+}
+
+.heart::after {
+    content: '';
+    right: -50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: var(--yellow-color);
+    border-radius: 50px;
+    rotate: 90deg;
+    box-shadow: -10px 10px 90px var(--main-color);
+    /* animation: heart .8s ease infinite; */
+}
+
+@keyframes heart {
+    100% {
+        scale: .8;
+    }
+}
+ 

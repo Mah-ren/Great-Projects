@@ -1,0 +1,87 @@
+body {
+    min-height: 100vh;
+    color: #c3d4f0;
+    background-color: currentColor;
+
+}
+
+.container {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate:(-50%, -50%);
+    
+}
+
+.Pokemon_ball {
+
+    border-top: 300px solid #f25b54;
+    border-left: 300px solid #f25b54;
+    border-bottom: 300px solid #f2f2f2;
+    border-right: 300px solid #f2f2f2;
+    border-radius: 50%;
+    rotate: 45deg;
+    box-shadow: 50px 10px 10px #7784a8;
+}
+
+.Pokemon_ball::before {
+    
+    content: "";
+    position: absolute;
+    
+    translate: -299px;
+    
+    width: 600px ;
+    height: 17px;
+    background-color:#565656;
+    rotate: -45deg;
+
+}
+
+.empty_sides {
+
+    position: absolute;
+    background-color: currentColor;
+    height: 17px;
+    width: 20px;
+    top: 49.7%;
+    right: 97.9%;
+    translate: (left, -2100%);;
+
+    box-shadow: 595px 0 #7784a8;
+}
+
+.button {
+
+    position: absolute;
+    top: 45%;
+    left: 40%;
+
+    width: 100px;
+    height: 100px;
+    
+    translate: -50%, -50%;
+    background-color: #565656;
+    
+    border-radius: 50%;
+
+}
+
+.button::before {
+    
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 17.5%;
+
+    width: 40px;
+    height: 40px;
+    
+    translate: -50%, -50%;
+    background-color: white;
+    
+    border-radius: 50%;
+
+    border: solid #f2f2f2 15px;
+}
