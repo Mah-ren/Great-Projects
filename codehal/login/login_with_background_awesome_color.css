@@ -1,0 +1,216 @@
+:root {
+  --color-background-for-mahmoud: #0ef;
+  --color-background-for-uncle-ali: #f0f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #123;
+}
+
+.login_sec {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(sunset_website.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: background 11s infinite;
+}
+@keyframes background {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.login_box {
+  width: 400px;
+  height: 450px;
+  /* background-color: rebeccapurple; */
+  border: 2px solid #fff;
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.login_sec .login_box form h2 {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+form {
+  width: 90%;
+  padding-left: 20px;
+  /* position: relative; */
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.input_box {
+  position: relative;
+  margin: 0px 15px 15px 0px;
+  border-bottom: 2px solid #fff;
+  /* background-color: red; */
+  height: 60px;
+  transition: 2s;
+}
+
+.input_box input {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-color: red;
+  background-color: transparent;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  color: #fff;
+  z-index: -1;
+  bottom: -10%;
+}
+
+.input_box label {
+  position: absolute;
+  left: 2px;
+  bottom: 10px;
+  pointer-events: none;
+  transition: 12s;
+}
+
+.input_box input:focus ~ label,
+.input_box input:valid ~ label {
+  top: -5px;
+  /* font-size: 12px; */
+}
+
+.icon {
+  z-index: 11;
+  cursor: pointer;
+
+}
+
+#icon_email,
+#icon_password {
+  width: 15px;
+  height: 17px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 25px;
+  right: 5px;
+  border-radius: 10%;
+}
+
+.remember_forget input {
+  margin-right: 5px;
+}
+
+.remember_forget label a {
+  margin-left: 80px;
+}
+
+.register_link {
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+}
+
+.register_link a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 
+! this is the skewed button i use it with login button
+*/
+
+.submit {
+  width: 96%;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 6px 0;
+  font-size: 18px;
+  /* margin-bottom: 50px; */
+  cursor: pointer;
+  border: var(--color-background-for-mahmoud) 2px solid;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: var(--color-background-for-mahmoud);
+  font-size: 1.3em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 1s, box-shadow 0.5s;
+}
+
+.submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewX(35deg);
+  translate: -200% 0px;
+  background-color: var(--color-background-for-mahmoud);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+.submit:hover {
+  transition-delay: 0s, 1s;
+  box-shadow: 0 0 10px var(--color-background-for-mahmoud),
+    0 0 20px var(--color-background-for-mahmoud),
+    0 0 160px var(--color-background-for-mahmoud);
+  letter-spacing: 0.04em;
+  color: #fff;
+  
+}
+
+.submit:hover::before {
+  translate: 70% 0px;
+  opacity: 1;
+}
+
+
+@media (max-width:390px) {
+    .login_box {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      border-radius: none;
+    }
+}

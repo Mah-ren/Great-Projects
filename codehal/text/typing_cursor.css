@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: right;
+    color: #fff;
+    background-color: #123;
+}
+
+.wrapper{ 
+    direction: rtl;
+    margin: 20px;
+    display: flex;
+    width: 2900px;
+    translate: -50px 200px;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+
+}
+.wrapper ul{
+    position: relative;
+
+}
+.wrapper ul li{
+    list-style: none;
+    margin-right: 20px;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+    position: relative;
+    /*! writing the delay after the steps or before it */
+    animation: slide 12s steps(3) 6s infinite;
+
+}
+@keyframes slide {
+    100%{
+        top: -190px;
+    }
+}
+.wrapper .sec_texts{
+    color: #0ef;
+    width: 880px;
+}
+
+.wrapper ul li::before{
+    content: '';
+    width: 100%;
+    height: 40px;
+    background-color: #123;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    border-right: 2px solid aqua;
+    animation: typing 6s steps(22) alternate infinite ;
+} 
+
+@keyframes typing {
+    100%{
+        right: 100%;
+    }
+}
+

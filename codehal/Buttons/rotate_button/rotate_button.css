@@ -1,0 +1,119 @@
+:root{
+    --color-background-for-mahmoud: #0ef;
+    --color-background-for-uncle-ali: #f0f;
+}
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+#btn1{
+    border: none;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    color: var(--color-background-for-mahmoud);
+    font-size: 22px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 1s, box-shadow 0s;
+    
+}
+
+#btn1:hover{
+    transition-delay: 0s, 1s;
+    box-shadow: 
+    0 0 10px var(--color-background-for-mahmoud),
+    0 0 20px var(--color-background-for-mahmoud),
+    0 0 40px var(--color-background-for-mahmoud),
+    0 0 80px var(--color-background-for-mahmoud),
+    0 0 160px var(--color-background-for-mahmoud);
+    letter-spacing: .04em;
+    color: #fff;
+    
+
+
+}
+
+#btn1::before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background-color: var(--color-background-for-mahmoud);
+    z-index: -1;
+    transition: 1s;
+    
+}
+
+
+#btn1:hover::before{
+    width: 100%;
+    transform: translateX(-50%) scale(1) rotate(360deg);
+    /* animation: btn1_before 1s ease-in-out .1s 1 normal none running; */
+}
+
+#btn2{
+    border: none;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    color: var(--color-background-for-uncle-ali);
+    font-size: 22px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 1s, box-shadow 0s;
+}
+
+#btn2:hover{
+    transition-delay: 0s, 1s;
+    box-shadow: 
+    0 0 10px var(--color-background-for-uncle-ali),
+    0 0 20px var(--color-background-for-uncle-ali),
+    0 0 40px var(--color-background-for-uncle-ali),
+    0 0 80px var(--color-background-for-uncle-ali),
+    0 0 160px var(--color-background-for-uncle-ali);
+    letter-spacing: .04em;
+    color: #fff;
+}
+
+#btn2::before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background-color: var(--color-background-for-uncle-ali);
+    z-index: -1;
+    transition: 1s;
+    
+}
+
+
+#btn2:hover::before{
+    width: 100%;
+    transform: translateX(-50%) scale(1) rotate(360deg);
+    /* animation: btn1_before 1s ease-in-out .1s 1 normal none running; */
+}

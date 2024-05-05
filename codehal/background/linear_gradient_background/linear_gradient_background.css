@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    background: linear-gradient(45deg, red 2%, #0ef, green, red, #0ef, blue, darkviolet);
+    background-size: 1000% 200%;
+    height: 90vh;
+    animation: background 10s infinite alternate-reverse;
+}
+
+@keyframes background {
+    0% {
+        background-position: 0% 50%;
+    }
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
